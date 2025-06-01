@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { Provider } from 'react-redux'
@@ -9,6 +10,8 @@ import ProducerListScreen from '../../screens/ListProducers/producerListScreen'
 jest.mock('../../features/producer/slice', () => ({
   updateProducer: jest.fn()
 }))
+
+const r = React
 
 const mockProducers = [
   {
@@ -37,6 +40,7 @@ const mockProducers = [
 ]
 
 const renderWithStore = (preloadedState: Partial<RootState> = {}) => {
+  r
   const store = configureStore({
     reducer: (state = preloadedState) => state as RootState
   })

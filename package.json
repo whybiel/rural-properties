@@ -2,7 +2,7 @@
   "name": "react-agro",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://github.com/whybiel/rural-properties",
+  "homepage": "https://whybiel.github.io/rural-properties",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

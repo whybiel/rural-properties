@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { Provider } from 'react-redux'
@@ -11,8 +12,9 @@ jest.mock('../../features/producer/slice', () => ({
 }))
 
 const mockReducer = (state = {}) => state
-
+const r = React
 describe('ProducerFormScreen', () => {
+  r
   let store: ReturnType<typeof configureStore>
 
   beforeEach(() => {

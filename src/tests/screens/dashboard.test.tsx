@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import * as reactRedux from 'react-redux'
 import DashboardScreen from '../../screens/Dashboard/dashboardScreen'
 
+const r = React
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
   useSelector: jest.fn()
@@ -42,6 +44,7 @@ beforeAll(() => {
 })
 
 describe('DashboardScreen', () => {
+  r
   beforeEach(() => {
     ;(reactRedux.useSelector as unknown as jest.Mock).mockImplementation(
       (callback) => callback({ producer: { producers: mockProducers } })
